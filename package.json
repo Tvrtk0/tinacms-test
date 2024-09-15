@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "tinacms dev -c 'astro dev'",
     "start": "tinacms build && astro dev",
-    "build": "tinacms build && astro check && astro build",
+    "build": "tinacms build && astro build",
+    "check": "astro check",
     "preview": "astro preview",
     "astro": "astro"
   },
