@@ -21,6 +21,8 @@ jobs:
       TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
       TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
     steps:
+      - name: Increase memory
+        run: export NODE_OPTIONS=--max_old_space_size=4096
       - name: Checkout your repository using git
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
